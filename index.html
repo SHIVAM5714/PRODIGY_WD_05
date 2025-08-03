@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraCast - Your Daily Atmospheric Insights</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>AuraCast</h1>
+            <p>Your Daily Atmospheric Insights</p>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Enter city name or coordinates..." id="searchInput">
+                <button class="search-btn" onclick="searchWeather()">🔍</button>
+            </div>
+            <button class="location-btn" onclick="getCurrentLocation()">📍</button>
+        </div>
+
+        <div class="unit-toggle">
+            <button class="unit-btn active" onclick="setUnit('metric')" id="celsiusBtn">°C</button>
+            <button class="unit-btn" onclick="setUnit('imperial')" id="fahrenheitBtn">°F</button>
+        </div>
+
+        <div id="weatherContent">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Getting your location and weather data...</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
